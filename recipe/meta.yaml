@@ -27,8 +27,9 @@ requirements:
     - h5py
     - tabulate
     - lalsuite
+    - gstlal
     - rift >=0.0.15.7,<0.0.15.9
-    - rapid-pe ==0.0.6
+    - rapid-pe >=0.1.0,<0.2.0
 
 test:
   imports:
