@@ -1,5 +1,5 @@
 {% set name = "rapidpe-rift-pipe" %}
-{% set version = "0.1.0" %}
+{% set version = "0.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/rapidpe_rift_pipe-{{ version }}.tar.gz
-  sha256: a6297bdb382fa7422f6e2b08506e926341df6cd141d5aa1725e5d9a89dc0bc9e
+  sha256: 89decff1ed8dcd100252dfcc901f0dae89bd3b59a0836b2949c7aac428475e02
 
 build:
   entry_points:
