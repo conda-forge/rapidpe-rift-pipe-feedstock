@@ -26,10 +26,10 @@ requirements:
     - matplotlib-base
     - h5py
     - tabulate
-    - lalsuite
+    - lalsuite !=7.15
     - gstlal
     - gwpy >=3.0.4
-    - rift >=0.0.15.7,<0.0.15.9
+    - rift ==0.0.15.9
     - rapid-pe >=0.1.0,<0.2.0
 
 test:
