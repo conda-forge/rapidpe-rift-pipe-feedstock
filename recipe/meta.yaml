@@ -29,7 +29,7 @@ requirements:
     - lalsuite !=7.15
     - gstlal
     - gwpy >=3.0.4
-    - rift ==0.0.15.9
+    - rift >=0.0.15.9,<0.0.15.12
     - rapid-pe >=0.1.1,<0.2.0
 
 test:
