@@ -1,13 +1,14 @@
 {% set name = "rapidpe-rift-pipe" %}
-{% set version = "0.6.9" %}
+{% set version = "0.7.0" %}
+{% set python_min = "3.8" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/rapidpe_rift_pipe-{{ version }}.tar.gz
-  sha256: 8c3ef0f52d5505de8be79799e404d8d75ce46a66748e2ea42b5255feec39a48d
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/rapidpe_rift_pipe-{{ version }}.tar.gz
+  sha256: f4d86a3f04f4031d77a4b9a05c1885d76fa2987206183e40ca3b6d8ed820077c
 
 build:
   entry_points:
@@ -18,10 +19,11 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
+    - setuptools
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - numpy
     - matplotlib-base
     - h5py
@@ -39,6 +41,7 @@ test:
     - pip check
     - rapidpe-rift-pipe --help
   requires:
+    - python {{ python_min }}
     - pip
     # HACK: Something is wrong with pytables, which we don't even use but a
     #       dependency does, so I'm pinning this to an older version
